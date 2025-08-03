@@ -356,4 +356,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+Open an issue or contact the dev team via abdullah.bajwa.co@gmail.com.
+---
 **Built with ❤️ by the Inceptra Team**

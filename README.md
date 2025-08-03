@@ -179,6 +179,8 @@ pnpm run dev
 
 Visit `http://localhost:5173` to see the application!
 
+**🌐 Or check out the live demo:** [https://frontend-lake-zeta-90.vercel.app/](https://frontend-lake-zeta-90.vercel.app/)
+
 ## 📡 API Endpoints
 
 ### Authentication Required
@@ -275,18 +277,40 @@ All AI operations use multiple models with automatic fallback:
 
 ## 🚀 Deployment
 
-### Frontend (Vercel/Netlify)
+### Production URLs
+- **Frontend**: [https://frontend-lake-zeta-90.vercel.app/](https://frontend-lake-zeta-90.vercel.app/)
+- **Backend API**: [https://inceptra-server.onrender.com/](https://inceptra-server.onrender.com/)
+
+### Frontend (Vercel)
 ```bash
 cd frontend
 pnpm run build
-# Deploy dist/ folder
+# Deploy dist/ folder to Vercel
 ```
 
-### Backend (Railway/Render)
+### Backend (Render)
 ```bash
 cd server
 pnpm run build
-# Deploy with environment variables
+# Deploy with environment variables to Render
+```
+
+### Environment Variables for Production
+**Frontend (Vercel):**
+```env
+VITE_API_BASE_URL=https://inceptra-server.onrender.com/api
+VITE_CLERK_PUBLISHABLE_KEY=pk_live_your_clerk_key_here
+VITE_CLIENT_URL=https://frontend-lake-zeta-90.vercel.app
+```
+
+**Backend (Render):**
+```env
+PORT=10000
+NODE_ENV=production
+CLIENT_URL=https://frontend-lake-zeta-90.vercel.app
+CLERK_SECRET_KEY=sk_live_your_clerk_key_here
+DATABASE_URL=your_postgresql_connection_string
+HF_TOKEN=your_huggingface_token_here
 ```
 
 ### Database
@@ -313,6 +337,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🆘 Support
 
+- **Live Demo**: [https://frontend-lake-zeta-90.vercel.app/](https://frontend-lake-zeta-90.vercel.app/)
+- **API Status**: [https://inceptra-server.onrender.com/](https://inceptra-server.onrender.com/)
 - **Documentation**: Check the `/docs` folder for detailed guides
 - **Issues**: Report bugs and feature requests via GitHub Issues
 - **Discussions**: Join community discussions on GitHub
